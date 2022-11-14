@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+
+main {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.container h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 3rem;
+}
+
+#counter {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 1rem 0 0;
+}
+
+.button-container .btn {
+    margin: 5px 5px;
+    padding: 5px 20px 4px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.btn.decrease {
+    background-color: red;
+    color: white;
+}
+
+.btn.reset {
+    background-color: blue;
+    color: white;
+}
+
+.btn.increase {
+    background-color: green;
+    color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    border-radius: 0;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.8;
+}
+
+@media (min-width: 768px) {
+    .container h1 {
+        font-size: 4rem;
+    }
+
+    #counter {
+        font-size: 4rem;
+    }
+
+    .button-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
